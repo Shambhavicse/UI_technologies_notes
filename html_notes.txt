@@ -1,0 +1,29 @@
+What is HTML?
+HTML(Hypertext Mark-up Language) is a standard mark-up language for creating Web pages
+
+Hyper Text means "Text within Text". A text which has a link within it, is known as hyper text. 
+Mark-up language "mark up" a text document with tags that tells a web browser how to structure the document to display. 
+HTML is a subset of the Standard Generalized Markup Language(SGML).
+SGML is an international standard (ISO 8879) published in 1986 as a format for structuring and marking up documents.
+
+Where HTML is used?
+HTML is used to create Web Pages 
+Html is extensively used in online solutions such as e-commerce, bankin, insurance, trading, blogging, social media, information provided by government, new and many more.
+People use web browers to access the desired websited from computer, tablet or movile devices
+Broswers render the web pages to screen so that content can be seen by user
+
+Why HTML5?
+Provides the integration for latest multimedia. 
+Candidate for cross-platform mobile apps (designed with low-powered devices in mind)
+Many new syntactic features are included-`
+-To natively include and handle multimedia and graphical content 
+-To enrich the semantic content of documents, new page structure elements have been introduced
+-DOM is now fundamental parts of the HTML5 specification 
+-Improves processing of any invalid documents 
+game development with canvas
+
+What is HTML5?
+HTML5 is the new standard for HTML, XHTML and HTML DOM(Document Object Model)
+HTML5 is a cooperation between World Wide Web Consortium(W3C) and Web Hypertext Application Technology Working Group(WHATWG)
+
+UTF* converts the code in machine readable format 8 means in 8 bits
