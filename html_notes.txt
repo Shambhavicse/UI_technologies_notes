@@ -27,3 +27,15 @@ HTML5 is the new standard for HTML, XHTML and HTML DOM(Document Object Model)
 HTML5 is a cooperation between World Wide Web Consortium(W3C) and Web Hypertext Application Technology Working Group(WHATWG)
 
 UTF* converts the code in machine readable format 8 means in 8 bits
+
+VS Code useful extensions----
+1. Live Server
+2. Live Preview
+3. Prettier - Code formater
+4. Auto Close Tag
+5. Auto Rename Tag 
+6. Tailwind CSS IntelliSense
+7. Babel ES6/ES7
+8. Babel JavaScript
+9. Simple React Snippets
+10. ES7+React/Redux/React-Native snippets
