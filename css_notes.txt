@@ -1,0 +1,38 @@
+What is CSS?
+CSS stands for Cascading Style Sheet
+CSS is a design language intended to simplify the process of making web pages presentable. 
+CSS handles the look and feel part of a web page. 
+If HTML is foundation, CSS is the flair 
+
+Who invented CSS?
+Norwegian Hakon Wium Lie
+
+Ways to apply CSS
+Style information can be included in following Ways
+1. Inline 
+2. Internal
+3. External
+
+To add emojis press windows+. 
+
+Different types of selectors: 
+1. descendent combinator - div p{...} means the style will apply to <p> which is inside the <div>
+2. attribute selector - input[type="text"]{..} means the style will apply to input of text type
+3. group selector - h1,div{..} means the style will apply to h1 as well as div
+4. pseudo selector - .btn:hover{..} means the style will apply when button is hovered means when mouse is on the button
+
+Box Model - 
+every thing is in the box that's why it is called box model. It has 3 things: padding, border, margin
+
+Padding: 
+padding take 4 values: top, right, bottom, left to remember this imagine a clock and move in the clockwise direction, padding can't be negative 
+if we give 3 values then it will sync with the opposite value, if we give 2 values then also it will take the opposite sides values, if we give 1 value then it will apply to all direction 
+
+Margin: 
+Similar to padding but we can use negative values
+
+Display property:
+1. inline: make all the text in one line but we can't increase the size of the inline, it will take the space of the text only. Inline means same line
+2. inline-block: we can change the size
+3. block: it will take the width of whole screen. Block means one after another
+
