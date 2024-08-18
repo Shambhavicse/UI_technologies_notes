@@ -36,3 +36,6 @@ Display property:
 2. inline-block: we can change the size
 3. block: it will take the width of whole screen. Block means one after another
 
+Flexbox: 
+Flexible box layout - way to arrange element in a container such that they can automatically adjust there size and position according to the available space. This make it handy for the responsive design 
+
