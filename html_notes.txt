@@ -28,6 +28,20 @@ HTML5 is a cooperation between World Wide Web Consortium(W3C) and Web Hypertext 
 
 UTF* converts the code in machine readable format 8 means in 8 bits
 
+Tags: Tell Broswer how to render different element 
+
+2 ways to open HTML docs: 
+1. by editor
+2. by broswer
+
+Attributes: Properties. They provide additional information about elements, All HTML elements can have attributes.
+
+Element: Combination of opening tag + content + closing tag is known as element. 
+Eg - <h1>Hello</h1>
+
+<pre></pre>: used to show the text as it is written. use in the poet problem. PRE- - Preformatted Text Element
+
+note - some tags will be in red color in vs that means that tag is deprecated means they are for old html not for newer version
 VS Code useful extensions----
 1. Live Server
 2. Live Preview

@@ -20,7 +20,8 @@ Different types of selectors:
 2. attribute selector - input[type="text"]{..} means the style will apply to input of text type
 3. group selector - h1,div{..} means the style will apply to h1 as well as div
 4. pseudo selector - .btn:hover{..} means the style will apply when button is hovered means when mouse is on the button
-
+5. element selector - CSS can select HTML elements by using an element's tag name. A tag name is the word or character between HTML angle brakets.
+6. class selector - CSS is not limited to selecting elements by tag name. HTML elements can have more than just a tag name. They can also have attributes. One common attribute is the class attribute. It's also possible to select an element by its class attribute. To select an HTML element by its class using CSS, a period(.) must be prepended to the class's name.
 Box Model - 
 every thing is in the box that's why it is called box model. It has 3 things: padding, border, margin
 
