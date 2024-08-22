@@ -1,0 +1,25 @@
+JS - What?
+1. A programming language designed for web pages
+2. It is embedded directly into HTML pages
+3. An interpreted, client-side, event based language 
+4. It is dynamic, lightweight and case-sensitive
+
+ways to write JS:
+1. Imternal
+2. External
+
+document.write() - to display in the web 
+console.log() - to display in the console
+
+JS variables and datatypes:
+Variables: they are like containers that holds data
+to declare data we use 
+1. Let: modern way to declare, don't allow redeclaration
+2. Var: it is old , allow redeclaration
+3. Const: fixed values
+
+Datatypes: numbers, strings(sequence of characters), booleans, arrays, objects
+NaN - not a numbers used to show invalid numbers
+undefined - that has not been defined yet
+
+prompt: user input, by default it will take string value
