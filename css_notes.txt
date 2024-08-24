@@ -9,28 +9,99 @@ Norwegian Hakon Wium Lie
 
 Ways to apply CSS
 Style information can be included in following Ways
-1. Inline 
-2. Internal
-3. External
+1. Inline - To style an HTML element, you can add the style attribute directly to the opening tag. After you add the attribute, you can set it equal to the CSS styles you'd like applied to that element. Inline styles sould be avoided at all costs because they make it impossible to alter styles from external stylesheet. That said, there will be many times when you need to apply styles to only a specific HTML element. For this, you should always use CSS classes instead of inline styles. 
+2. Internal/style tag - Inline styles are a fast way of styliing HTML, but they also have limitations. If you wanted to style, for eg, multiple <h1> elements, you would have to add inline styling to each element manually. In addition, you would also have to maintain the HTML code when additional <h1>elements are added. Fortunately, HTML allows you to write CSS code in its own dedicated section with the <style> element. CSS can be written between opening and closing <style> tags. To use the <style> element, it must be places inside of the <head> element. 
+3. External - When HTML and CSS code are in the separate files, the files must be linked, otherwise, the HTML file won't be able to locate the CSS code and the stylingwill not be applied. You can use the <link> element to link HTML and CSS files together. The <link> element must be placed within the head of the HTML file.
+
+Specificity 
+Because elements can have multiple CSS selectors, there is a hierarchy for the weight given to each type of selector. Here is the logical order of selectors from least to most weight assigned: 
+ type selectors(eg - h1) and pseudo-elements (eg - ::before).
+ class selectors(eg - .abc), attributes selectors(eg - [type="radio"]) and pseudo-classes(eg - :hover).
+ ID selectors(eg - #eg)
 
 To add emojis press windows+. 
 
 Different types of selectors: 
 1. descendent combinator - div p{...} means the style will apply to <p> which is inside the <div>
 2. attribute selector - input[type="text"]{..} means the style will apply to input of text type
-3. group selector - h1,div{..} means the style will apply to h1 as well as div
-4. pseudo selector - .btn:hover{..} means the style will apply when button is hovered means when mouse is on the button
+3. group selector/multiple selector - What if we want to add some styles to all our headings? we don't want to have redundant rules, since that would eventually become a nightmare to maintain and is not scalable at all. Instead, we can select multiple HTML elements in the same CSS rule by separating them with commas. Copying and pasting code is usually a bad idea for web developers and multiple selectors can help reduce that kind of behaviour quite a bit.  h1,div{..} means the style will apply to h1 as well as div
+4. pseudo-classes selector - A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected elements. Eg- :hover can be used to change a button's color when the user's pointer hovers over it. .btn:hover{..} means the style will apply when button is hovered means when mouse is on the button
 5. element selector - CSS can select HTML elements by using an element's tag name. A tag name is the word or character between HTML angle brakets.
 6. class selector - CSS is not limited to selecting elements by tag name. HTML elements can have more than just a tag name. They can also have attributes. One common attribute is the class attribute. It's also possible to select an element by its class attribute. To select an HTML element by its class using CSS, a period(.) must be prepended to the class's name.
+7. ID selector - For situations where you need more specificity in styling, you may also select elements for CSS using an id attribute. You can have different ids associated with a class (although a class is not required). The id attribute can be added to an element, along with a class attribute. On the CSS side, the delineation is made by using # to represent an id, the same way . is used for class.
+
 Box Model - 
-every thing is in the box that's why it is called box model. It has 3 things: padding, border, margin
+The box model is the baisc buliding block of CSS. According to the box model concept, evenry element on a page is a rectangular box and may have width, height, padding, borders and margins. 
+every thing is in the box that's why it is called box model. It has 3 things: padding, border, margin.
 
 Padding: 
 padding take 4 values: top, right, bottom, left to remember this imagine a clock and move in the clockwise direction, padding can't be negative 
 if we give 3 values then it will sync with the opposite value, if we give 2 values then also it will take the opposite sides values, if we give 1 value then it will apply to all direction 
 
 Margin: 
-Similar to padding but we can use negative values
+Similar to padding but we can use negative values.
+
+Notes --- When we add padding, border, margin in the box then the size to box increases. If we want not to increase the size of the box then we can add box-sizing: border-box. 
+
+Colors in CSS: 
+Colors in CSS can be specified by the following methods: 
+1. hexadecimal colors - A hexadecimal color is specified with #RRGGBB, where the RR(red), GG(green) and BB(blue) hexadecimal integers specify the components of the color. All values must be between 00 and FF. Eg. the #0000ff value is rendered as blue, because the blue comnent is set to its highest value(ff) and the others are set to 00.
+2. RGB colors - An RGB color is specified with the rgb() function, which has the following syntax: rgb(Red, green, blue). Each parameter (red, green, blue) defines the intensity of the color and be an integer between 0 and 255 or a percentage value (from 0% to 100%). Eg. the rgb(0,0,255) value is rendered as blue, because the blue parameter is set to its highest value(255) and the others are set to 0.
+3. Predefined/Cross-browser color names - 140 color names are predefined in the HTML and CSS color specification.
+4. RGBA colors - A stands for alpha the opacity value.
+5. HSL colors - hsl(hue, saturation, lightness). Hue range from 0 to 360, saturation and lightness range from 0% to 100%  
+6. HSLA colors - 
+
+Units in CSS: 
+1. Absolute Unit - mm, cm, in, px
+2. Percentage Unit - 10% will be equal to the 10% of there parent. Eg. parent div height=100px so nested div hr=eight=10%(which is 10/100 - 10px)
+3. Relative Unit
+   - Relative to font size - em(1em will be equal to the parent's size. Eg. 18px font-size of div and nested div font-size is 1em so 1*18 will be 18px),rem - reltive to root(<HTML>)
+   - Relative to document - vh(1/100*height of screen), vw(1/100*width 0f screen)
+
+CSS gradients: 
+CSS gradients let you display smooth transitions between two or more specified colors.
+CSS defines 3 types of gradients:
+1. Linear gradients(goes down/up/left/right/diagonally) - To create a linear gradient you must define at least 2 color stops. Color stops are the colors you want to render smooth transitions among. You can also set a strating point and a direction (or an angle) along with the gradient effect.
+Syntax - background-image: linear-gradient(direction, color-stop1,color-stop2,....);
+directions - Default direction(top to down), Specific direction, Using angles, using transparency
+2. Radial Gradients(defined by their center) - A radial gradient is defined by its center. To create a radial gradient you must also define at least 2 color stops. 
+Syntax - background-image: radial-gradient(shape size at position, start-color,...,last color);
+you can change spacing of colors/set pre-defined shapes/repeating gradient
+3. Conic Gradients(rotated around a center point) - A conic gradient is a gradient with color transitions rotated around a center point. To create a conic gradient you must define at least 2 colors. 
+Syntax - background-image: conic-gradient([from angle][at position,]color[degree],color[degree],.....);
+
+CSS Shadow Effects: 
+With CSS you can add shadow to text and to elements.
+1. Text-shadow - The CSS text-shadow property applies shadow to text. You can add horizontal/vertical shadows. Color can be added. Blur can also be added. Multiple shadows on 1 text can be added  
+2. Box-shadow - The CSS box-shadow property is used to apply one or more shadows to an element. Default color of shadow is text color. Color of shadow can be changed. Blur can be added. Spread-radius can be changed. Multiple shadows can be added using comma
+
+CSS Dimension properties:
+1. width
+2. height
+3. Min-height
+4. Min-width
+5. Max-height
+6. Max-width
+
+Overflow Property:
+The Overflow CSS shorthand property sets the desired behaviour for an element's overflow - i.e. when an element's content is too big to fit in its block formatting context - in both directions.
+values - visible, hidden, scroll, auto
+
+CSS Position Property:
+The position property specifies the type of positioning method used for an element
+1. static - HTML elements are positioned static by default. An element with position:static; is not positionedin any special way, it is always positioned according to the normal flow of the page. 
+2. Relative - An element with position:relative; is positioned relative to its normal position. Setting the top, right,bottom and laft properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element
+3. fixed - An element with position:fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom and left properties are used to position the element.
+4. Absolute - An element with position:absolute; is positioned relative to the nearest positioned ancestor (instead of position relative to the viewport, like fixed). However, if an absolute positioned element has no positioned ancestors, it uses the document body and moves along with page scrolling. Note: Absolute positioned elements are removed from the normal flow and can overlap elements.
+5. sticky - An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed)
+
+CSS -2D trnasforms:
+CSS trnasforms allow you to move, rotate, scale and skew elements. With transform property you can use following methods:
+translate(x,y) - mave the block element from its position, rotate() - rotate in clock and anticlockwise, scaleX(), scaleY(), scale() - zoom the element, skewX(), skewY(), skew() - tilt the element, matrix(a, b, c, d, tx, ty)
+
+CSS 3D transforms: 
+Same operations can be performed w.r.t. 3d space but for z axis we has to on perspective(10px)
 
 Display property:
 1. inline: make all the text in one line but we can't increase the size of the inline, it will take the space of the text only. Inline means same line
@@ -38,5 +109,5 @@ Display property:
 3. block: it will take the width of whole screen. Block means one after another
 
 Flexbox: 
-Flexible box layout - way to arrange element in a container such that they can automatically adjust there size and position according to the available space. This make it handy for the responsive design 
+Flexible box layout - way to arrange element in a container such that they can automatically adjust there size and position according to the available space. This make it handy for the responsive design. Flexbox is a great way to get more flexibility in your layouts and to simplify responsive layout design. It makes it easy to align elements on a 2D plans and is pretty easy to use once you get familiar with the main properties. The first step is to display:flex; on a conatiner element. The children to the flex container become flex items, A set of properties can be applied to flex containers and have an effect to all the items as a whole and a different set of properties can be applied to flex items and have their effect on the targeted items. Flex items can in tuen also be flex containers for the elements it contains, making it easy to create complex layouts.  
 
