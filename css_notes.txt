@@ -109,5 +109,24 @@ Display property:
 3. block: it will take the width of whole screen. Block means one after another
 
 Flexbox: 
-Flexible box layout - way to arrange element in a container such that they can automatically adjust there size and position according to the available space. This make it handy for the responsive design. Flexbox is a great way to get more flexibility in your layouts and to simplify responsive layout design. It makes it easy to align elements on a 2D plans and is pretty easy to use once you get familiar with the main properties. The first step is to display:flex; on a conatiner element. The children to the flex container become flex items, A set of properties can be applied to flex containers and have an effect to all the items as a whole and a different set of properties can be applied to flex items and have their effect on the targeted items. Flex items can in tuen also be flex containers for the elements it contains, making it easy to create complex layouts.  
+Flexible box layout - way to arrange element in a container such that they can automatically adjust there size and position according to the available space. This make it handy for the responsive design. Flexbox is a great way to get more flexibility in your layouts and to simplify responsive layout design. It makes it easy to align elements on a 2D plans and is pretty easy to use once you get familiar with the main properties. The first step is to display:flex; on a conatiner element. The children to the flex container become flex items, A set of properties can be applied to flex containers and have an effect to all the items as a whole and a different set of properties can be applied to flex items and have their effect on the targeted items. Flex items can in tuen also be flex containers for the elements it contains, making it easy to create complex layouts. 
+ Flex-container Properties: 
+ The flex container becomes flexible by setting the display property to flex.
+ flex-direction(row,column,row-reverse,column-reverse), flex-wrap(wrap,nowrap,wrap-reverse), flex-flow(shorthand for direction and wrap), justify-content(flex-start, flex-end,center,space-around,space-evenly,space-between) - applies on main-axis(x-axis), align-items - applies on cross-axis(y-axis), align-content - handles the space between the rows
+ Flex-items properties:
+ The direct child elements of a flex container automatically becomes flexible(flex) items.
+ order, flex-grow, flex-shrink, flex-basis, flex, align-self
 
+Object-fit: The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its conatiner
+
+What is CSS Grid?
+A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements. They help us to create layouts in which our elements won't jump around or change width as we move from page to page, providing greater consistency on our websites. 
+- CSS Grid Layout is a 2-D layout system for the web. 
+- It lets you lay content out in rows and columns.
+- It has many features that make building complex layouts straightforward. 
+- A grid will typically have columns, rows and then gaps between each row and column. The gaps are commonly referred to as gutters. 
+
+Line based placement: 
+We now move on from creating a grid to placing things on the grid. Our grid always has lines - these are numbered beginning with 1 and relate to the writing mode of the document. Eg. coulmn line 1 in English (written left-to-right) would be on the left-and side of the grid and row line 1 at the top.
+grid-column-start, grid-column-end: grid-column
+grid-row-start, grid-row-end: grid-row
